@@ -22,20 +22,21 @@ public class FileEditor {
     var filename = "test.txt";
 
     try (var br = new BufferedReader(new FileReader(filename))) {
-      String line,
-        vorname;
-      String[] attribs,
-        attribDesc = {"Name: ", "Vorname: ", "Geburtsdatum: "};
 
-      int maxItems = attribDesc.length,
-        thisYear = Calendar.getInstance().get(Calendar.YEAR),
-        age;
+      int maxItems = attribDesc.length;
+      int thisYear = Calendar.getInstance().get(Calendar.YEAR);
+      var lines = br.lines();
+      lines.map(line -> {
+        var attributes = line.split(";");
+        return new Person(attributes())
+      });
+
       while ((line = br.readLine()) != null) {
-        attribs = line.split(";");
-        vorname = attribs[1];
-        if (person.equals(vorname)) {
+        String[] attribs = line.split(";");
+        String firstName = attribs[1];
+        if (person.equals(firstName)) {
           for (int i = 0; i < maxItems; i++) {
-            printMsgString(attribDesc[i] + attribs[i]);
+            out(attribDesc[i] + attribs[i]);
           }
 
           /**
@@ -43,17 +44,16 @@ public class FileEditor {
            * wir das Alter immer mit maxItems - 1 Selektieren. - 1, da
            * der Index von 0 anfängt.
            */
-          age = thisYear - Integer.parseInt(attribs[maxItems - 1]);
-          printMsgString("Alter: " + age + "\n");
+          int age = thisYear - Integer.parseInt(attribs[maxItems - 1]);
+          out("Alter: " + age + "\n");
         }
       }
     } catch (IOException e) {
-      printMsgString("Fehler beim Einlesen der Datei.");
+      out("Fehler beim Einlesen der Datei.");
     }
   }
 
-  public void printMsgString(String msg) {
+  public void out(String msg) {
     System.out.println(msg);
   }
-
 }
