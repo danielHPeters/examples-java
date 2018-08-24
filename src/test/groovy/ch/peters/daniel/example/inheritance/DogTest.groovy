@@ -2,6 +2,12 @@ package ch.peters.daniel.example.inheritance
 
 import spock.lang.Specification
 
+/**
+ * Dog unit test.
+ *
+ * @author Daniel Peters <daniel.peters.ch@gmail.com>
+ * @version 1.0
+ */
 class DogTest extends Specification {
   def 'constructor should set correct attributes'() {
     given:

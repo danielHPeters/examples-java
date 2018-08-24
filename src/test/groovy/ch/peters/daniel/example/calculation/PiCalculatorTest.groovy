@@ -2,8 +2,14 @@ package ch.peters.daniel.example.calculation
 
 import spock.lang.Specification
 
+/**
+ * PiCalculator unit test.
+ *
+ * @author Daniel Peters <daniel.peters.ch@gmail.com>
+ * @version 1.0
+ */
 class PiCalculatorTest extends Specification {
-  def 'approximate pi correcty with 10000000 drops' () {
+  def 'approximate pi correcty with 10000000 drops'() {
     given:
     def dropCount = 10000000
 
@@ -11,6 +17,6 @@ class PiCalculatorTest extends Specification {
     def pi = PiCalculator.approximatePi(dropCount)
 
     then:
-    pi == 3.1412264d
+    DecimalRounder.round(pi, 2) == 3.14d
   }
 }

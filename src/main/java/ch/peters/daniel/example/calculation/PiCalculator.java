@@ -26,5 +26,4 @@ public class PiCalculator {
 
     return 4 * (double) inner / dropCount;
   }
-
 }

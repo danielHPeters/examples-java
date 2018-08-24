@@ -1,4 +1,4 @@
-package ch.peters.daniel.example.filehandling;
+package ch.peters.daniel.example.filehandling.model;
 
 import java.time.LocalDate;
 
@@ -17,5 +17,21 @@ public class Person {
     this.firstName = firstName;
     this.lastName = lastName;
     this.birthDate = birthDate;
+  }
+
+  public int getAge() {
+    return LocalDate.now().getYear() - birthDate.getYear();
+  }
+
+  public String getLastName() {
+    return lastName;
+  }
+
+  public String getFirstName() {
+    return firstName;
+  }
+
+  public LocalDate getBirthDate() {
+    return birthDate;
   }
 }
