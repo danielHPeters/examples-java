@@ -5,11 +5,11 @@ import spock.lang.Specification
 /**
  * PiCalculator unit test.
  *
- * @author Daniel Peters <daniel.peters.ch@gmail.com>
+ * @author Daniel Peters
  * @version 1.0
  */
 class PiCalculatorTest extends Specification {
-  def 'approximate pi correcty with 10000000 drops'() {
+  def 'approximate pi correctly with 10000000 drops'() {
     given:
     def dropCount = 10000000
 

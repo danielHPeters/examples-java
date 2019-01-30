@@ -1,11 +1,9 @@
 package ch.peters.daniel.example.calculation;
 
-import java.math.BigDecimal;
-
 /**
  * Pi calculator.
  *
- * @author Daniel Peters <daniel.peters.ch@gmail.com>
+ * @author Daniel Peters
  * @version 1.0
  */
 public class PiCalculator {

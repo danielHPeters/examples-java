@@ -6,12 +6,11 @@ import javax.swing.JTextField;
 /**
  * Dialog boxes examples.
  *
- * @author Daniel Peters <daniel.peters.ch@gmail.com>
+ * @author Daniel Peters
  * @version 1.0
  */
 public class DialogBoxes {
   public static void dialogBoxes() {
-
     int input;
     String stringInput;
 

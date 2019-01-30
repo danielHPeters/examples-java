@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 /**
  * Class used to find entities from a file.
  *
- * @author Daniel Peters <daniel.peters.ch@gmail.com>
+ * @author Daniel Peters
  * @version 1.1
  */
 public class EntityFinderFromFile<T> implements EntityFinder<T> {

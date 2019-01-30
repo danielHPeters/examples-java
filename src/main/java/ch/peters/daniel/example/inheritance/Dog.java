@@ -3,7 +3,7 @@ package ch.peters.daniel.example.inheritance;
 /**
  * Dog model class.
  *
- * @author Daniel Peters <daniel.peters.ch@gmail.com>
+ * @author Daniel Peters
  * @version 1.0
  */
 public class Dog extends Animal {

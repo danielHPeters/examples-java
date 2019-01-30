@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 /**
  * Person factory class.
  *
- * @author Daniel Peters <daniel.peters.ch@gmail.com>
+ * @author Daniel Peters
  * @version 1.0
  */
 public class FactoryPerson implements Factory<Person> {
@@ -18,6 +18,7 @@ public class FactoryPerson implements Factory<Person> {
     return stringStream
       .map(line -> {
         var attributes = line.split(";");
+
         return new Person(attributes[0], attributes[1], LocalDate.parse(attributes[2]));
       })
       .filter(p -> p.getLastName().equals(name))
